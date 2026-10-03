@@ -14,6 +14,7 @@ import { SiTailwindcss } from "react-icons/si";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+
   return (
     <div className={`App ${darkMode ? "dark-mode" : ""}`}>
       {/* ================= NAVBAR ================= */}
@@ -31,14 +32,16 @@ function App() {
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
           </div>
-                  <a href="#contact" className="connect-button">
+
+          <a href="#contact" className="connect-button">
             Let's connect →
           </a>
 
           <button
             className="theme-toggle"
             onClick={() => setDarkMode(!darkMode)}
-            aria-label="Toggle dark mode">
+            aria-label="Toggle dark mode"
+          >
             {darkMode ? <FaSun /> : <FaMoon />}
           </button>
         </div>
@@ -64,7 +67,7 @@ function App() {
                   rel="noreferrer"
                   aria-label="LinkedIn"
                 >
-                   <FaLinkedinIn />
+                  <FaLinkedinIn />
                 </a>
 
                 <a
@@ -73,18 +76,18 @@ function App() {
                   rel="noreferrer"
                   araia-label="GitHub"
                 >
-                    <FaGithub />
+                  <FaGithub />
                 </a>
               </div>
             </div>
 
-           {/* Profile Photo */}
+            {/* Profile Photo */}
             <div className="hero-photo-wrapper">
               <div className="hero-photo">
-              <img
-                src="/images/profile.jpg"
-                alt="Mohammad Hussain Sohil Jinabade"
-              />
+                <img
+                  src={`${import.meta.env.BASE_URL}images/profile.jpg`}
+                  alt="Mohammad Hussain Sohil Jinabade"
+                />
               </div>
 
               <div className="availability">
@@ -107,18 +110,19 @@ function App() {
 
           </div>
         </section>
-{/* Resume */}
-<section className="resume-section">
-  <p className="section-label">// resume</p>
 
-  <a
-  href="/resume/Hussain_CV.pdf"
-  download="Hussain_CV.pdf"
-  className="resume-button"
->
-  Download Resume ↓
-</a>
-</section>
+        {/* Resume */}
+        <section className="resume-section">
+          <p className="section-label">// resume</p>
+
+          <a
+            href={`${import.meta.env.BASE_URL}resume/Hussain_CV.pdf`}
+            download="Hussain_CV.pdf"
+            className="resume-button"
+          >
+            Download Resume ↓
+          </a>
+        </section>
 
         {/* ================= ABOUT ================= */}
 
@@ -141,7 +145,6 @@ function App() {
             </p>
 
           </div>
-
 
           <div className="about-grid">
 
@@ -167,7 +170,6 @@ function App() {
 
             </div>
 
-
             <div className="tech-card">
 
               <p className="tech-card-title">
@@ -175,37 +177,36 @@ function App() {
               </p>
 
               <div className="tech-grid">
-              <span>
-                <FaHtml5 />
-                HTML
-              </span>
+                <span>
+                  <FaHtml5 />
+                  HTML
+                </span>
 
-              <span>
-                <FaCss3Alt />
-                CSS
-              </span>
+                <span>
+                  <FaCss3Alt />
+                  CSS
+                </span>
 
-              <span>
-                <FaJs />
-                JavaScript
-              </span>
+                <span>
+                  <FaJs />
+                  JavaScript
+                </span>
 
-              <span>
-                <FaReact />
-                React.js
-              </span>
+                <span>
+                  <FaReact />
+                  React.js
+                </span>
 
-              <span>
-                <SiTailwindcss />
-                Tailwind CSS
-              </span>
-            </div>
+                <span>
+                  <SiTailwindcss />
+                  Tailwind CSS
+                </span>
+              </div>
 
             </div>
 
           </div>
         </section>
-
 
         {/* ================= EXPERIENCE ================= */}
 
@@ -229,103 +230,115 @@ function App() {
             </div>
           </div>
 
+          <div className="experience-item">
+            <div className="experience-left">
+              <div className="experience-date">
+                FEB 2026 — JUN 2026
+              </div>
+
+              <img
+                className="company-logo"
+                src={`${import.meta.env.BASE_URL}images/edutainer-logo.png`}
+                alt="Edutainer logo"
+              />
+            </div>
+
+            <div className="experience-content">
+              <h3>Web Development Intern</h3>
+
+              <h4>Edutainer-PAT Technologies Pvt. Ltd.</h4>
+
+              <ul>
+                <li>
+                  Worked on practical web development projects using HTML,
+                  CSS, JavaScript and React.
+                </li>
+
+                <li>
+                  Developed responsive web interfaces and focused on creating
+                  clean and user-friendly experiences.
+                </li>
+
+                <li>
+                  Gained hands-on experience with frontend development,
+                  PHP, MySQL and Python through practical tasks.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* CODSOFT */}
 
           <div className="experience-item">
-  <div className="experience-left">
-    <div className="experience-date">
-      FEB 2026 — JUN 2026
-    </div>
+            <div className="experience-left">
+              <div className="experience-date">
+                20 SEP 2026 — 20 OCT 2026
+              </div>
 
-    <img
-      className="company-logo"
-      src="/images/edutainer-logo.png"
-      alt="Edutainer logo"
-    />
-  </div>
+              <img
+                className="company-logo"
+                src={`${import.meta.env.BASE_URL}images/codsoft-logo.png`}
+                alt="CodSoft logo"
+              />
+            </div>
 
-  <div className="experience-content">
-    <h3>Web Development Intern</h3>
+            <div className="experience-content">
+              <h3>Full-Stack Web Development Intern</h3>
 
-    <h4>Edutainer-PAT Technologies Pvt. Ltd.</h4>
+              <h4>CodSoft</h4>
 
-    <ul>
-      <li>
-        Worked on practical web development projects using HTML,
-        CSS, JavaScript and React.
-      </li>
+              <ul>
+                <li>
+                  Selected for a Full-Stack Web Development internship at CodSoft.
+                </li>
 
-      <li>
-        Developed responsive web interfaces and focused on creating
-        clean and user-friendly experiences.
-      </li>
+                <li>
+                  Worked on practical web development tasks and project
+                  implementations during the internship.
+                </li>
 
-      <li>
-        Gained hands-on experience with frontend development,
-        PHP, MySQL and Python through practical tasks.
-      </li>
-    </ul>
-  </div>
-</div>
-        {/* CODSOFT */}
-{/* CODSOFT */}
-<div className="experience-item">
-  <div className="experience-left">
-    <div className="experience-date">
-      20 SEP 2026 — 20 OCT 2026
-    </div>
+                <li>
+                  Gained hands-on experience through assigned development projects.
+                </li>
+              </ul>
+            </div>
+          </div>
 
-    <img
-      className="company-logo"
-      src="/images/codsoft-logo.png"
-      alt="CodSoft logo"
-    />
-  </div>
+          <div className="experience-item">
+            <div className="experience-left">
+              <p className="experience-date">
+                02 OCT 2026 — 02 NOV 2026
+              </p>
 
-  <div className="experience-content">
-    <h3>Full-Stack Web Development Intern</h3>
+              <img
+                src={`${import.meta.env.BASE_URL}images/auspify-logo.png`}
+                alt="Auspify Technologies"
+                className="company-logo"
+              />
+            </div>
 
-    <h4>CodSoft</h4>
+            <div className="experience-content">
+              <h3>Front End Development Intern</h3>
+              <h4>Auspify Technologies</h4>
 
-    <ul>
-      <li>
-        Selected for a Full-Stack Web Development internship at CodSoft.
-      </li>
+              <ul>
+                <li>
+                  Selected for a Front End Development internship at Auspify Technologies.
+                </li>
 
-      <li>
-        Worked on practical web development tasks and project
-        implementations during the internship.
-      </li>
+                <li>
+                  Working on practical frontend development tasks and project implementations.
+                </li>
 
-      <li>
-        Gained hands-on experience through assigned development projects.
-      </li>
-    </ul>
-  </div>
-</div>
+                <li>
+                  Gaining hands-on experience with modern web development technologies.
+                </li>
+              </ul>
+            </div>
+          </div>
 
-<div className="experience-item">
-  <div className="experience-left">
-    <p className="experience-date">02 OCT 2026 — 02 NOV 2026</p>
+        </section>
 
-    <img
-      src="/images/Auspify-logo.png"
-      alt="Auspify Technologies"
-      className="company-logo"
-    />
-  </div>
-
-  <div className="experience-content">
-    <h3>Front End Development Intern</h3>
-    <h4>Auspify Technologies</h4>
-
-    <ul>
-      <li>Selected for a Front End Development internship at Auspify Technologies.</li>
-      <li>Working on practical frontend development tasks and project implementations.</li>
-      <li>Gaining hands-on experience with modern web development technologies.</li>
-    </ul>
-  </div>
-</div>
-</section>
         {/* ================= PROJECTS ================= */}
 
         <section
@@ -351,7 +364,6 @@ function App() {
 
           </div>
 
-
           {/* ================= REVUP ================= */}
 
           <article className="project-item">
@@ -359,7 +371,7 @@ function App() {
             <div className="project-image">
 
               <img
-                src="/images/Home-Page.jpg"
+                src={`${import.meta.env.BASE_URL}images/Home-Page.jpg`}
                 alt="RevUp BMW Sales Dashboard"
               />
 
@@ -368,7 +380,6 @@ function App() {
               </div>
 
             </div>
-
 
             <div className="project-info">
 
@@ -391,7 +402,6 @@ function App() {
                 interface.
               </p>
 
-
               <div className="project-tech">
                 <span>Python</span>
                 <span>Django</span>
@@ -399,7 +409,6 @@ function App() {
                 <span>Scikit-learn</span>
                 <span>Matplotlib</span>
               </div>
-
 
               <div className="project-links">
 
@@ -424,7 +433,6 @@ function App() {
 
           </article>
 
-
           {/* ================= EXPENSE TRACKER ================= */}
 
           <article className="project-item reverse">
@@ -432,7 +440,7 @@ function App() {
             <div className="project-image">
 
               <img
-                src="/images/First-Page.png"
+                src={`${import.meta.env.BASE_URL}images/First-Page.png`}
                 alt="Expense Tracker Dashboard"
               />
 
@@ -441,7 +449,6 @@ function App() {
               </div>
 
             </div>
-
 
             <div className="project-info">
 
@@ -463,7 +470,6 @@ function App() {
                 spending analysis and financial forecasting.
               </p>
 
-
               <div className="project-tech">
                 <span>HTML</span>
                 <span>CSS</span>
@@ -471,7 +477,6 @@ function App() {
                 <span>Local Storage</span>
                 <span>Canvas API</span>
               </div>
-
 
               <div className="project-links">
 
@@ -487,9 +492,9 @@ function App() {
                   href="https://hussainjinabade.github.io/Expenses-Tracker/"
                   target="_blank"
                   rel="noreferrer"
-                  >
+                >
                   Live Demo ↗
-                </a>        
+                </a>
 
               </div>
 
@@ -498,7 +503,6 @@ function App() {
           </article>
 
         </section>
-
 
         {/* ================= CONTACT ================= */}
 
@@ -524,7 +528,6 @@ function App() {
               projects. Let's build something useful together.
             </p>
 
-
             <div className="contact-links">
 
               <a href="mailto:hussainjinabade65@gmail.com">
@@ -548,7 +551,6 @@ function App() {
               </a>
 
             </div>
-
 
             <p className="footer-name">
               &lt;Mohammad Hussain Sohil Jinabade /&gt;
