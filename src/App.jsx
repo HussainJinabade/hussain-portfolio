@@ -307,11 +307,11 @@ function App() {
           <div className="experience-item">
             <div className="experience-left">
               <p className="experience-date">
-                02 OCT 2026 — 02 NOV 2026
+                02 OCT 2026 — 02 NOV 2026(Ongoing)
               </p>
 
               <img
-                src={`${import.meta.env.BASE_URL}images/auspify-logo.png`}
+                src={`${import.meta.env.BASE_URL}images/Auspify-logo.png`}
                 alt="Auspify Technologies"
                 className="company-logo"
               />
